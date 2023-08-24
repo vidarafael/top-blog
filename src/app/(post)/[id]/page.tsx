@@ -8,7 +8,7 @@ import { ServerPost } from "./ServerPost";
 import Link from "next/link";
 import { Skeleton } from "@/components/Skeleton";
 
-export default function Post({
+export default function Page({
   params,
 }: {
   params: { id: string }

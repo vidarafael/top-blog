@@ -1,7 +1,7 @@
 import { AiOutlineLock } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 
-export default function Login() { 
+export default function Page() { 
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-white sm:bg-gray-200">
       <form className="w-[440px] h-[440px] px-6 rounded bg-white" >

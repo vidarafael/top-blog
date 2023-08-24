@@ -1,7 +1,7 @@
 import { ServerPosts } from "./ServerPosts";
 import { MainContentLayout } from "./MainContentLayout";
 
-export default function Home() {
+export default function Page() {
 
   return (
     <MainContentLayout>
