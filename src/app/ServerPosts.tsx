@@ -6,7 +6,8 @@ import { Skeleton } from "@/components/Skeleton";
 const ONE_DAY_IN_SECONDS = 60 * 60 * 24 // 86400 seconds => 24 hours
 
 export async function ServerPosts() {
-    const data = await fetch('http://127.0.0.1:3333/posts/enterprises/64e3e00de2ad49ad028f974b', { next: { revalidate: ONE_DAY_IN_SECONDS } })
+  
+    const data = await fetch(`https://${process.env.NEXT_URL_BACK}/posts/enterprises/64e3e00de2ad49ad028f974b`, { next: { revalidate: ONE_DAY_IN_SECONDS } })
     const { posts } = await data.json() as { posts: any[] }
 
     return (
