@@ -30,24 +30,14 @@ export function Header({ scrollPosition = 0, setModalSearchMobileIsOpen, classNa
           <span className={className?.span ? className.span : `${scrollMove ? 'hidden' : ''}`}>Soluções financeiras</span>
         </div>
 
-        <div className="flex">
+        <div className="flex pr-2">
           {/* Show button only media device */}
           <button className="h-[40px] text-2xl text-white lg:hidden" onClick={() => setModalSearchMobileIsOpen(true)}>
             <AiOutlineSearch />
           </button>
-
-          <select name="" id="" className="h-[34px] appearance-none p-2 flex items-center bg-transparent border-none outline-none text-white">
-            <option value="">PT</option>
-            <option value="">BR</option>
-          </select>
         </div>
       </div>
 
-      {/* {modalSearchMobileIsOpen && <ModalSearchMobile setIsOpen={setModalSearchMobileIsOpen} />} */}
-
-
     </header>
-
-    
   )
 }

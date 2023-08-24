@@ -3,7 +3,7 @@ import { PostContainer } from "@/components/PostContainer";
 const ONE_DAY_IN_SECONDS = 60 * 60 * 24 // 24 hours
 
 export async function ServerPost({ id }: { id: string }) {
-  const data = await fetch(`http://localhost:3333/posts/${id}`, { next: { revalidate: ONE_DAY_IN_SECONDS } })
+  const data = await fetch(`http://127.0.0.1:3333/posts/${id}`, { next: { revalidate: ONE_DAY_IN_SECONDS } })
   const { post } = await data.json()
 
   if (!post) {

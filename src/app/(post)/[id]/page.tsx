@@ -2,10 +2,11 @@
 
 import { Header } from "@/components/Header"
 import { ModalSearchMobile } from "@/components/ModalSearchMobile";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { AiOutlineLeft, AiOutlineSearch } from "react-icons/ai";
 import { ServerPost } from "./ServerPost";
 import Link from "next/link";
+import { Skeleton } from "@/components/Skeleton";
 
 export default function Post({
   params,
@@ -24,7 +25,7 @@ export default function Post({
             <AiOutlineLeft /> Voltar ao início
           </Link>
 
-          <Suspense fallback={<p>Carregando..........</p>}>
+          <Suspense fallback={<Skeleton />}>
             <ServerPost id={params.id}  />
           </Suspense>
 
