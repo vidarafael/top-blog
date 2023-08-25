@@ -1,9 +1,9 @@
 import { PostContainer } from "@/components/PostContainer";
 
-// const ONE_DAY_IN_SECONDS = 60 * 60 * 24 // 24 hours
+const ONE_DAY_IN_SECONDS = 60 * 60 * 24 // 24 hours
 
 export async function ServerPost({ id }: { id: string }) {
-  const data = await fetch(`https://${process.env.NEXT_URL_BACK}/posts/${id}`, { next: { revalidate: 0 } })
+  const data = await fetch(`https://${process.env.NEXT_URL_BACK}/posts/${id}`, { next: { revalidate: ONE_DAY_IN_SECONDS } })
 
   const { post } = await data.json()
 
