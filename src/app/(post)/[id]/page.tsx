@@ -1,23 +1,19 @@
-"use client"
-
-import { Header } from "@/components/Header"
-import { ModalSearchMobile } from "@/components/ModalSearchMobile";
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { AiOutlineLeft, AiOutlineSearch } from "react-icons/ai";
 import { ServerPost } from "./ServerPost";
 import Link from "next/link";
 import { Skeleton } from "@/components/Skeleton";
+import { ContainerUseClientComponents } from "./ContainerUseClientComponents";
 
-export default function Page({
+export default function Post({
   params,
 }: {
   params: { id: string }
 }) {
-  const [modalSearchMobileIsOpen, setModalSearchMobileIsOpen] = useState(false);
 
   return ( 
     <>
-      <Header setModalSearchMobileIsOpen={setModalSearchMobileIsOpen} className={{ header: 'w-screen fixed z-50 p-4 flex bg-blue-700 top-0', span: 'hidden' }} />
+      <ContainerUseClientComponents />
 
       <div className="mt-[20px] mb-8 flex mx-auto max-w-[1040px] w-full px-4">
         <div className="mx-auto w-full max-w-[800px]">
@@ -44,8 +40,6 @@ export default function Page({
           </ul>
         </div>
       </div>
-
-      {modalSearchMobileIsOpen && <ModalSearchMobile setIsOpen={setModalSearchMobileIsOpen} />}
     </>
   )
 
