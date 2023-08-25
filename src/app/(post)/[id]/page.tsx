@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Skeleton } from "@/components/Skeleton";
 import { ContainerUseClientComponents } from "./ContainerUseClientComponents";
 
-export default function Post({
+export default function Page({
   params,
 }: {
   params: { id: string }
